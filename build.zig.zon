@@ -1,0 +1,23 @@
+.{
+    .name = .zcandump,
+    .version = "1.0.0",
+
+    .fingerprint = 0x616ebfa372037f3f,
+
+    .minimum_zig_version = "0.16.0",
+
+    .dependencies = .{
+        .can = .{
+            .url = "git+https://github.com/lumaaaaaa/zig-can#aae2e722796bd1628e4c156903db86e4f2c4cb42",
+            .hash = "can-0.0.1-wSFr4HgSAADH41tsqnlTxTnayeXpUe5kscowbhRtgVEV",
+        },
+    },
+
+    .paths = .{
+        "build.zig",
+        "build.zig.zon",
+        "src",
+        "LICENSE",
+        "README.md",
+    },
+}
