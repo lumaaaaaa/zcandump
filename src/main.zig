@@ -18,14 +18,14 @@ pub fn main(init: std.process.Init) !void {
 
     var frame: can.Frame = undefined;
     while (true) {
-        _ = try can_sock.readFrame(&frame);
+        try can_sock.readFrame(&frame);
 
         std.debug.print("  {s}  {X:03}   [{d}]  ", .{
             interface_name, frame.can_id, frame.len,
         });
 
         for (frame.data[0..frame.len]) |char| {
-            std.debug.print("{X} ", .{char});
+            std.debug.print("{X:02} ", .{char});
         }
 
         std.debug.print("\n", .{});
